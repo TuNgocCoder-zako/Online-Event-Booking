@@ -721,7 +721,7 @@ components:
         email:
           type: string
           format: email
-          example: admin@bookingevent.com
+          example: admin@gmail.com
         password:
           type: string
           format: password

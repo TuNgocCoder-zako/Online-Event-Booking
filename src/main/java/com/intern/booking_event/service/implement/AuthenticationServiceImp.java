@@ -134,7 +134,7 @@ public class AuthenticationServiceImp implements AuthenticationService {
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         log.info("SignKey: {}", SIGNATURE_KEY);
 
-        String loginIdentifier = request.getEmail();
+        String loginIdentifier = request.getEmail() != null ? request.getEmail().trim() : null;
         log.info("Attempting login with identifier: [{}]", loginIdentifier);
 
         if (loginIdentifier == null || loginIdentifier.isBlank()) {
